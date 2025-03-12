@@ -4,7 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddb9c2d3-ddb9-4153-ac5b-81904a93bd58" name="Changes" comment="" />
+    <list default="true" id="ddb9c2d3-ddb9-4153-ac5b-81904a93bd58" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/config.properties.template" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/mziuri/model/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/mziuri/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/mziuri/service/Database.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/mziuri/servlet/MessageServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/mziuri/servlet/UserServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/mziuri/validation/Validation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mziuri/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mziuri/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mziuri/model/Brand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mziuri/model/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mziuri/servlet/DataServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/mziuri/validation/ValidationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/mziuri/validation/ValidationTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,11 +53,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Record" />
-        <option value="Class" />
         <option value="Enum" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -55,6 +77,8 @@
     &quot;Gradle.Mziuri [build].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Mziuri [war].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;G:/C2/Documents/Projects/Exchange&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -62,18 +86,29 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\Messenger\src" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.mziuri" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <envs>
+        <env name="DB_URL" value="jdbc:postgresql://localhost:5432/messenger_db" />
+        <env name="DB_USER" value="postgres" />
+        <env name="DB_PASSWORD" value="ArVitsi.0" />
+      </envs>
       <option name="MAIN_CLASS_NAME" value="org.mziuri.Main" />
-      <module name="Mziuri.main" />
+      <module name="Messenger.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.mziuri.servlet.*" />
@@ -128,11 +163,16 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Gradle.Mziuri [build]" />
+      <item itemvalue="Gradle.Mziuri [war]" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.Mziuri [build]" />
         <item itemvalue="Gradle.Mziuri [war]" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -169,5 +209,8 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.template" />
   </component>
 </project>
