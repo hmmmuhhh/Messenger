@@ -5,24 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddb9c2d3-ddb9-4153-ac5b-81904a93bd58" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config.properties.template" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/mziuri/model/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/mziuri/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/mziuri/service/Database.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/mziuri/servlet/MessageServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/mziuri/servlet/UserServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/mziuri/validation/Validation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/mziuri/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mziuri/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/mziuri/model/Brand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/mziuri/model/Car.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/mziuri/servlet/DataServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/mziuri/validation/ValidationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/mziuri/validation/ValidationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
