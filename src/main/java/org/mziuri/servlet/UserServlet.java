@@ -8,22 +8,24 @@ import java.sql.SQLException;
 public class UserServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        resp.setContentType("text/plain"); // Set response content type to plain text
+        resp.setCharacterEncoding("UTF-8");
+
+        String username = req.getParameter("username");
+        String password = req.getParameter("password");
+
         try {
-            String username = req.getParameter("username");
-            String password = req.getParameter("password");
-
-            if (username == null || password == null) {
-                resp.sendError(400, "Username and password are required");
-                return;
-            }
-
             boolean success = Database.getInstance().addUser(username, password);
-
-            if (success) resp.setStatus(200);
-            else resp.sendError(403, "Username already exists");
+            if (success) {
+                resp.setStatus(200); // Success
+                resp.getWriter().write("User registered successfully");
+            } else {
+                resp.setStatus(403); // Forbidden
+                resp.getWriter().write("Username already exists");
+            }
         } catch (SQLException e) {
-            e.printStackTrace();
-            resp.sendError(500, "Database error");
+            resp.setStatus(500); // Internal Server Error
+            resp.getWriter().write("Database error: " + e.getMessage());
         }
     }
 }

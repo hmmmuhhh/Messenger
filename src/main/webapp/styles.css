@@ -1,4 +1,3 @@
-/* styles.css */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -57,8 +56,21 @@ button:hover {
 }
 
 .message {
-    padding: 8px;
-    margin: 5px 0;
+    padding: 12px;
+    margin: 8px 0;
     background-color: white;
-    border-left: 3px solid #4CAF50;
+    border-left: 4px solid #4CAF50;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.timestamp {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.content {
+    font-size: 1.1em;
+    color: #333;
 }

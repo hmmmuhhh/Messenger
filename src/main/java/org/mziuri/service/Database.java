@@ -56,12 +56,17 @@ public class Database {
         }
     }
 
-    public void addMessage(String receiver, String content) throws SQLException {
+    public boolean addMessage(String receiver, String content) throws SQLException {
         String sql = "INSERT INTO messages (receiver_username, content) VALUES (?, ?)";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setString(1, receiver);
             stmt.setString(2, content);
             stmt.executeUpdate();
+            return true;
+        } catch (SQLException e) {
+            System.err.println("Error adding message to database:");
+            e.printStackTrace();
+            throw e; // Re-throw the exception to propagate it
         }
     }
 
