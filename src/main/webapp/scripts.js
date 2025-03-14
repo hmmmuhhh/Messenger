@@ -40,10 +40,14 @@ function displayMessages(messages) {
     }
 
     messages.forEach(msg => {
+        console.log('Raw timestamp:', msg.timestamp); // Log the raw timestamp
+        const formattedTimestamp = formatTimestamp(msg.timestamp);
+        console.log('Formatted timestamp:', formattedTimestamp); // Log the formatted timestamp
+
         const messageDiv = document.createElement('div');
         messageDiv.className = 'message';
         messageDiv.innerHTML = `
-            <div class="timestamp">${formatTimestamp(msg.timestamp)}</div>
+            <div class="timestamp">${formattedTimestamp}</div>
             <div class="content">${msg.content}</div>
         `;
         container.appendChild(messageDiv);
