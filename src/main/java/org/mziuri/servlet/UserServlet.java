@@ -8,7 +8,7 @@ import java.sql.SQLException;
 public class UserServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        resp.setContentType("text/plain"); // Set response content type to plain text
+        resp.setContentType("text/plain");
         resp.setCharacterEncoding("UTF-8");
 
         String username = req.getParameter("username");

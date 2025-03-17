@@ -1,6 +1,5 @@
-// Define helper functions first
 async function handleResponse(response, action) {
-    const responseText = await response.text(); // Parse the plain text response
+    const responseText = await response.text();
     if (response.ok) {
         showAlert(`${action} successful: ${responseText}`, true);
     } else {
@@ -31,6 +30,7 @@ function formatTimestamp(timestamp) {
 }
 
 function displayMessages(messages) {
+    console.log('Messages received:', messages); // Log the messages array
     const container = document.getElementById('messagesContainer');
     container.innerHTML = '';
 
@@ -40,14 +40,11 @@ function displayMessages(messages) {
     }
 
     messages.forEach(msg => {
-        console.log('Raw timestamp:', msg.timestamp); // Log the raw timestamp
-        const formattedTimestamp = formatTimestamp(msg.timestamp);
-        console.log('Formatted timestamp:', formattedTimestamp); // Log the formatted timestamp
-
+        console.log('Parsed message:', { timestamp: msg.timestamp, content: msg.content }); // Log each message
         const messageDiv = document.createElement('div');
         messageDiv.className = 'message';
         messageDiv.innerHTML = `
-            <div class="timestamp">${formattedTimestamp}</div>
+            <div class="timestamp">${formatTimestamp(msg.timestamp)}</div>
             <div class="content">${msg.content}</div>
         `;
         container.appendChild(messageDiv);
@@ -56,34 +53,34 @@ function displayMessages(messages) {
 
 // Add event listeners after defining all functions
 document.addEventListener('DOMContentLoaded', () => {
-    // Registration Form Handler
-    document.getElementById('registerForm').addEventListener('submit', async (e) => {
+    // Read Messages Form Handler
+    document.getElementById('readMessagesForm').addEventListener('submit', async (e) => {
         e.preventDefault();
-        const username = document.getElementById('regUsername').value;
-        const password = document.getElementById('regPassword').value;
+        const username = document.getElementById('readUsername').value;
+        const password = document.getElementById('readPassword').value;
 
-        console.log('Registering user:', { username, password });
+        console.log('Reading messages for:', { username, password });
 
         try {
-            const response = await fetch('/user', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: new URLSearchParams({
-                    username: username,
-                    password: password
-                })
-            });
+            const response = await fetch(`/message?username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`);
 
-            console.log('Registration response:', response);
-            await handleResponse(response, 'Registration');
-            clearForm(e.target);
+            console.log('Read messages response:', response);
+
+            if (response.ok) {
+                const messages = await response.json(); // Parse the JSON response
+                displayMessages(messages);
+                clearForm(e.target);
+                showAlert('Messages loaded successfully!', true);
+            } else {
+                const errorText = await response.text();
+                showAlert(`Error ${response.status}: ${errorText}`, false);
+            }
         } catch (error) {
-            console.error('Registration error:', error);
+            console.error('Read messages error:', error);
             showAlert('Error: ' + error.message, false);
         }
     });
+});
 
     // Send Message Form Handler
     document.getElementById('sendMessageForm').addEventListener('submit', async (e) => {

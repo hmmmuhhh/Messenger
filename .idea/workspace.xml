@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ddb9c2d3-ddb9-4153-ac5b-81904a93bd58" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mziuri/service/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mziuri/service/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mziuri/servlet/MessageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mziuri/servlet/MessageServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/scripts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

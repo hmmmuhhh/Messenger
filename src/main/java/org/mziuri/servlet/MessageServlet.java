@@ -4,7 +4,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.http.*;
 import org.mziuri.model.Message;
 import org.mziuri.service.Database;
-import org.mziuri.validation.Validation;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
@@ -70,16 +69,20 @@ public class MessageServlet extends HttpServlet {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
 
+        System.out.println("Received request to read messages for user: " + username); // Log the request
         try {
             if (!Database.getInstance().validateUser(username, password)) {
                 resp.setStatus(403); // Forbidden
                 resp.getWriter().write("Invalid credentials");
+                System.out.println("Invalid credentials for user: " + username); // Log the error
                 return;
             }
 
             List<Message> messages = Database.getInstance().getMessages(username);
+            System.out.println("Retrieved " + messages.size() + " messages for user: " + username);
             ObjectMapper mapper = new ObjectMapper();
             String jsonResponse = mapper.writeValueAsString(messages);
+            System.out.println("Sending response:\n" + jsonResponse); // Log the response
             resp.getWriter().write(jsonResponse);
         } catch (SQLException e) {
             resp.setStatus(500); // Internal Server Error

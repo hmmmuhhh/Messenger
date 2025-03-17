@@ -66,7 +66,7 @@ public class Database {
         } catch (SQLException e) {
             System.err.println("Error adding message to database:");
             e.printStackTrace();
-            throw e; // Re-throw the exception to propagate it
+            throw e;
         }
     }
 
@@ -77,10 +77,10 @@ public class Database {
             stmt.setString(1, username);
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
-                messages.add(new Message(
-                        rs.getString("content"),
-                        rs.getString("timestamp")
-                ));
+                String content = rs.getString("content");
+                String timestamp = rs.getString("timestamp");
+                System.out.println("Retrieved message: " + timestamp + " - " + content);
+                messages.add(new Message(content, timestamp));
             }
         }
         return messages;
